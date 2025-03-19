@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Contact">Contact</a>
+        <a href="#Links">Links</a>
+    </div>
+
+    <div   id="Home" class="Home-tab">
+        <h1>Hi Iam Sharavanan,
+            Welcome to my protfolio
+            </h1>
+           <p>Hi, I'm Sharavanan, a final-year BCA student aspiring to become a Java Developer.<br>
+             I have a strong foundation in Java, MySQL, Data Structures & Algorithms (DSA), and web technologies like HTML & CSS. <br>
+             I am also proficient in Git and GitHub, continuously honing my skills to build efficient and scalable applications.
+             <br> Explore my projects and feel free to connect!</p>
+    </div>
+
+    <div id="About" class="About-tab">
+        <h1>SSLC</h1>
+        <p>P.C.K.G.GOVERNMENT SCHOOL<br>2020 Batch<br>72%</p>
+        <br>
+        <h1>HSC</h1>
+        <p>P.C.K.G.GOVERNMENT SCHOOL<br>2022 Batch<br>63%</p>
+        <br>
+        <h1>Bachelor's Degree</h1>
+        <p>The New College<br>BCA<br>2025 Batch<br>72%</p>
+    </div>
+
+    <div  id="Skills" class="Skills-tab">
+        <h1>Skills</h1>
+        <p>Java,Python,GitHub</p>
+    </div>
+
+    <div class="footer-section">
+        <!-- Contact Section -->
+        <div id="Contact" class="Contact-tab">
+            <h1>Contact</h1>
+            <div class="contact-info">
+                <a href="mailto:sharavanan045@gmail.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail" width="50" height="50">
+                </a>
+                <div class="phone-number">
+                    <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Phone Icon">
+                    <a href="tel:+9173585807799" style="text-decoration: none; color: black;">+91 73585807799</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Links Section -->
+        <div id="Links" class="Links-tab">
+            <h1>Links</h1>
+            <div class="links-info">
+                <a href="https://www.linkedin.com/in/sharavanan045/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="50" height="50">
+                </a>
+                <a href="https://github.com/sharavanan-code" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" width="50" height="50">
+                </a>
+                <a href="https://leetcode.com/u/code_with_sharavanan/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" width="50" height="50">
+                </a>
+            </div>
+        </div>
+    </div>
+
+  <!-- Profile Picture (Top Left Corner) -->
+<div class="profile-container">
+    <img src="Profile Pic.jpg" alt="Profile Picture" id="profile-pic" onclick="openModal()">
+</div>
+
+<!-- Modal for Enlarged Profile Picture -->
+<div id="profile-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+<script>
+    function openModal() {
+        document.getElementById("profile-modal").style.display = "flex";
+        document.getElementById("modal-img").src = document.getElementById("profile-pic").src;
+    }
+
+    function closeModal() {
+        document.getElementById("profile-modal").style.display = "none";
+    }
+</script>
+
+
+</body>
+</html>
