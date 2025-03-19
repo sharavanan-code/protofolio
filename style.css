@@ -1,0 +1,294 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 200vh; /* Increased height to allow scrolling */
+    margin-left:5% ;
+    padding-top:200px;
+    padding-left: 10px;
+    overflow-x: hidden;
+}
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-attachment: fixed;
+    color: white;
+}
+
+
+.navbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.navbar a {
+    background: white;
+    padding: 10px;
+    width: 70px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: black;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.home-tab {
+    max-width: 100%;
+    height: 100vh; /* Takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10vw;
+    padding-top: 20vh; /* Moves Home slightly down */
+}
+
+.about-tab {
+    max-width: 100%;
+    height: 100vh; /* About section appears on scroll */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10vw;
+    padding-top: 10vh; /* Moves About section slightly lower */
+}
+
+.home-tab h1, .about-tab h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.home-tab p, .about-tab p {
+    font-size: 40px;
+    line-height: 1.6;
+}
+
+.about-tab h2 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    padding-top: 10%;
+    margin-top: 5%;
+}
+.skills-tab{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.skills-tab p{
+    font-size:40px ;
+    line-height: 1.6;
+}
+.footer-section {
+    display: flex;
+    justify-content: space-between; /* Contact on left, Links on right */
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 2px solid #ccc;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 0%;
+}
+
+/* Contact & Links - Same Style */
+.Contact-tab, .Links-tab {
+    display: flex;
+    flex-direction: column; /* Title on top, icons below */
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Row Layout for Contact & Links Icons */
+.contact-info, .links-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px; /* Space between items */
+}
+
+/* Phone Icon & Text Alignment */
+.phone-number {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.phone-number img {
+    width: 20px;
+    height: 20px;
+}
+/* Profile Picture - Top Left Corner */
+.profile-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+.profile-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Makes it circular */
+    cursor: pointer;
+    border: 3px solid white;
+    transition: transform 0.3s;
+}
+
+.profile-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+/* Footer Section - Background Fix */
+.footer-section {
+    display: flex;
+    justify-content: space-between; /* Contact on left, Links on right */
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Darker transparent background */
+    border-top: 2px solid #ccc;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 0%;
+    color: white; /* Ensures text is visible */
+}
+
+/* Contact & Links - Text Color Fix */
+.Contact-tab h1, .Links-tab h1 {
+    color: white; /* Make sure headings are visible */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Profile Picture Modal Fix */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    background:white;
+    border-top: 2px solid #ccc;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 0%;
+    color: white; /* Ensures text is visible */
+    flex-wrap: wrap; /* Prevents overlapping */
+}
+
+/* Contact & Links - Ensuring Visibility */
+.Contact-tab h1, .Links-tab h1 {
+    color: black; /* Ensure headings are visible */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Contact Info Row */
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Prevents items from overlapping */
+}
+
+/* Phone Number Visibility Fix */
+.phone-number {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phone-number img {
+    width: 25px; /* Adjust icon size */
+    height: 25px;
+}
+
+.phone-number a {
+    color: white; /* Ensure visibility */
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Links Row - Fix GitHub Visibility */
+.links-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Prevents items from hiding */
+}
+
+.links-info img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+}
+
+.links-info img:hover {
+    transform: scale(1.1);
+}
+
